@@ -6,16 +6,16 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
 import { LoginComponent } from '../identity/login/login.component';
 import { RegisterComponent } from '../identity/register/register.component';
-import { NgClass, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { NgClass, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, TestComponent, HeaderComponent, FooterComponent, MainLayoutComponent,
-    LoginComponent, RegisterComponent, NgClass, FormsModule, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
+    LoginComponent, RegisterComponent, NgClass, FormsModule, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 
 
@@ -41,4 +41,5 @@ export class AppComponent {
   }
   mss: string = '';
   _num: string = '0';
+  lst = [1, 2, 3, 4]
 }
