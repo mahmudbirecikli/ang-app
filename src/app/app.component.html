@@ -1,3 +1,25 @@
+<input type="text" #txtVal>
+<button type="button" (click)="changeVal(txtVal.value)">capatalize</button>
+<h1>{{valMessage}}</h1>
+
+<button id="btn1" (click)="GetMessage()">get message</button>
+<p style="background-color: red;"> this backed red</p>
+<p [style.background-color]="'red'">this backed red by binding color</p>
+<p [style.background-color]="isSuc?'green':'red'">this backed red by binding logicaly</p>
+<!-- <p class="txt-danger">this danger txt</p> -->
+<p [class.txt-danger]="!isSuc">this danger txt</p>
+
+<!-- <p class="txt-success">this success txt</p> -->
+<p [class.txt-success]="isSuc">this success txt</p>
+
+<p [ngClass]="_ngClass">this is ng class</p>
+
+<input type="text" [id]="_id" [value]="_value">
+
+<p>{{msg}}</p>
+<p>{{5+6}}</p>
+<p>{{"title: " + title}}</p>
+
 <app-login></app-login>
 <app-register></app-register>
 <h1>App Component</h1>
@@ -8,4 +30,5 @@
 <hr>
 <app-header></app-header>
 <app-main-layout></app-main-layout>
+<!-- {{_Msg()}} -->
 <app-footer></app-footer>
