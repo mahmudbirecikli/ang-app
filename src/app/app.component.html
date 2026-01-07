@@ -1,3 +1,15 @@
+<input type="text" [(ngModel)]="_num">
+<div [ngSwitch]="_num">
+    <h1 *ngSwitchCase="'0'">Zero</h1>
+    <h1 *ngSwitchCase="'1'">One</h1>
+    <h1 *ngSwitchCase="'2'">Two</h1>
+    <h1 *ngSwitchCase="'3'">Three</h1>
+    <h1 *ngSwitchDefault>None</h1>
+</div>
+<div *ngIf="1">this ngIf is true</div>
+<div *ngIf="0">this ngIf is false</div>
+<input type="text" [(ngModel)]="mss">
+<h1>{{mss}}</h1>
 <input type="text" #txtVal>
 <button type="button" (click)="changeVal(txtVal.value)">capatalize</button>
 <h1>{{valMessage}}</h1>
