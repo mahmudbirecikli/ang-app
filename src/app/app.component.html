@@ -1,3 +1,15 @@
+<h1>{{"file size is: " + (filesize |filesize:'GB')}}</h1>
+<h1>{{pipedMessage |slice:2:5}}</h1>
+<h1>{{pipedMessage |slice:2}}</h1>
+<h1>{{prc |percent}}</h1>
+<h1>{{date}}</h1>
+<h1>{{date | date:'short'}}</h1>
+<h1>{{date | date:'long'}}</h1>
+<h2>{{"normal case: "+ pipedMessage}}</h2>
+<h2>{{"normal case: "+ pipedMessage}}</h2>
+<h2>{{("lower case: "| titlecase)+(pipedMessage |lowercase)}}</h2>
+<h2>{{"upper case: "+(pipedMessage |uppercase)}}</h2>
+<h2>{{"title case: "+(pipedMessage |titlecase)}}</h2>
 <div *ngFor="let item of lst;index as i;even as e;">
     <div [style.background-color]="e?'green':'red'">{{"index: " + i}} - {{item}}</div>
 </div>

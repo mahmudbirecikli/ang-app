@@ -6,14 +6,17 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
 import { LoginComponent } from '../identity/login/login.component';
 import { RegisterComponent } from '../identity/register/register.component';
-import { NgClass, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle } from '@angular/common';
+import { NgClass, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle, LowerCasePipe, UpperCasePipe, TitleCasePipe, DatePipe, PercentPipe, SlicePipe }
+  from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FilesizePipe } from './Pipes/filesize.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, TestComponent, HeaderComponent, FooterComponent, MainLayoutComponent,
-    LoginComponent, RegisterComponent, NgClass, FormsModule, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle],
+    LoginComponent, RegisterComponent, NgClass, FormsModule, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgFor, NgStyle,
+    LowerCasePipe, UpperCasePipe, TitleCasePipe, DatePipe, PercentPipe, SlicePipe, FilesizePipe],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -41,5 +44,9 @@ export class AppComponent {
   }
   mss: string = '';
   _num: string = '0';
-  lst = [1, 2, 3, 4]
+  lst = [1, 2, 3, 4];
+  pipedMessage: string = 'Hello angulAr';
+  date: Date = new Date();
+  prc = 0.9;
+  filesize: number = 1048576;
 }
