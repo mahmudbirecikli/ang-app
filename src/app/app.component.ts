@@ -49,5 +49,5 @@ export class AppComponent {
   date: Date = new Date();
   prc = 0.9;
   filesize: number = 1048576;
-  _msg: string = 'imported to child';
+  // _msg: string = 'imported to child';
 }
